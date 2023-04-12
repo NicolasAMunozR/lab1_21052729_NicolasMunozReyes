@@ -6,8 +6,9 @@
                    (lambda(use)
                      (if(null? (list-ref system 2))
                         (make-system(get-name system)(get-drive system)(flatten(cons(get-user system)(make-user use)))
-                                    (get-carpetas system))
+                                    (get-carpetas system)(get-papelera system)(get-fecha system))
                         (if (member use (flatten(list-ref system 2)))
-                            (make-system(get-name system)(get-drive system)(get-user system)(get-carpetas system))
+                            (make-system(get-name system)(get-drive system)(get-user system)(get-carpetas system)(get-papelera system)(get-fecha system))
                             (make-system(get-name system)(get-drive system)
-                                        (flatten(cons(get-user system)(make-user use)))(get-carpetas system)))))))
+                                        (flatten(cons(get-user system)(make-user use)))(get-carpetas system)(get-papelera system)(get-fecha system)))))))
+
